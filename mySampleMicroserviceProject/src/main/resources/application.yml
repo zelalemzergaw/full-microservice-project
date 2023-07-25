@@ -1,0 +1,18 @@
+my:
+  greeting: welcome to my application! ${app.name}
+app:
+  name:
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+  profiles:
+    active: test
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+server:
+  port: 8080
+
+management.endpoints.web.exposure.include: "*"
